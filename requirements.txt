@@ -10,8 +10,9 @@ boto3==1.24.84
 jinja2==3.1.2
 pip-chill==1.0.1
 websockets==10.3
-imblearn
+imbalanced-learn
 scikit-learn
 pandas
 numpy
 matplotlib
+PyYAML

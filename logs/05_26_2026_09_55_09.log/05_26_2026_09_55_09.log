@@ -1,0 +1,33 @@
+[ 2026-05-26 09:55:11,004 ] root - INFO - \U0001f680 Starting Crypto ML Pipeline...
+[ 2026-05-26 09:55:11,006 ] root - INFO - Pipeline started
+[ 2026-05-26 09:55:11,007 ] root - INFO - Starting data ingestion
+[ 2026-05-26 09:55:11,007 ] root - INFO - Entered initiate_data_ingestion method
+[ 2026-05-26 09:55:11,026 ] root - INFO - Dataset loaded successfully: (5, 6)
+[ 2026-05-26 09:55:11,056 ] root - INFO - Data ingestion completed successfully
+[ 2026-05-26 09:55:11,062 ] root - INFO - Entered initiate_data_validation method
+[ 2026-05-26 09:55:11,077 ] root - INFO - Required columns present status: False
+[ 2026-05-26 09:55:11,078 ] root - INFO - Required columns present status: False
+[ 2026-05-26 09:55:11,078 ] root - INFO - Missing numerical columns: []
+[ 2026-05-26 09:55:11,079 ] root - INFO - Missing numerical columns: []
+[ 2026-05-26 09:55:11,079 ] root - INFO - Data validation artifact: DataValidationArtifact(validation_status=False, valid_train_file_path='artifact/train.csv', valid_test_file_path='artifact/test.csv', invalid_train_file_path='artifact/data_validation/invalid_train.csv', invalid_test_file_path='artifact/data_validation/invalid_test.csv', drift_report_file_path='artifact/data_validation/drift_report.yaml')
+[ 2026-05-26 09:55:11,079 ] root - INFO - Starting data transformation
+[ 2026-05-26 09:55:11,084 ] root - INFO - Cleaning dataframe (dropping unwanted columns)
+[ 2026-05-26 09:55:11,090 ] root - INFO - Cleaning dataframe (dropping unwanted columns)
+[ 2026-05-26 09:55:11,101 ] root - INFO - Loading schema file
+[ 2026-05-26 09:55:11,106 ] root - INFO - Numerical features: ['open', 'high', 'low', 'volume', 'marketCap']
+[ 2026-05-26 09:55:11,106 ] root - INFO - Categorical features: []
+[ 2026-05-26 09:55:11,146 ] root - INFO - Entered the save_object method of MainUtils class
+[ 2026-05-26 09:55:11,152 ] root - INFO - Exited the save_object method of MainUtils class
+[ 2026-05-26 09:55:11,155 ] root - INFO - Data transformation completed successfully
+[ 2026-05-26 09:55:11,156 ] root - INFO - Loading training and testing data
+[ 2026-05-26 09:55:11,184 ] root - INFO - Entered the load_object method of MainUtils class
+[ 2026-05-26 09:55:11,188 ] root - INFO - Exited the load_object method of MainUtils class
+[ 2026-05-26 09:55:11,188 ] root - INFO - Entered the save_object method of MainUtils class
+[ 2026-05-26 09:55:11,195 ] root - INFO - Exited the save_object method of MainUtils class
+[ 2026-05-26 09:55:11,195 ] root - INFO - Loading test data
+[ 2026-05-26 09:55:11,196 ] root - INFO - Loading trained model
+[ 2026-05-26 09:55:11,196 ] root - INFO - Entered the load_object method of MainUtils class
+[ 2026-05-26 09:55:11,199 ] root - INFO - Exited the load_object method of MainUtils class
+[ 2026-05-26 09:55:11,216 ] root - INFO - R2 Score: nan
+[ 2026-05-26 09:55:11,217 ] root - INFO - Model rejected
+[ 2026-05-26 09:55:11,217 ] root - INFO - \u2705 Pipeline Completed Successfully

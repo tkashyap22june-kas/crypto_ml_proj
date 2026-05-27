@@ -1,0 +1,4 @@
+[ 2026-05-26 09:03:19,998 ] root - INFO - \U0001f680 Starting Crypto ML Pipeline...
+[ 2026-05-26 09:03:19,999 ] root - INFO - Pipeline started
+[ 2026-05-26 09:03:20,000 ] root - INFO - Starting data ingestion
+[ 2026-05-26 09:03:20,000 ] root - INFO - Entered initiate_data_ingestion method

@@ -1,0 +1,8 @@
+[ 2026-05-25 12:11:13,007 ] root - INFO - Entered the run_pipeline method of TrainPipeline class
+[ 2026-05-25 12:11:13,008 ] root - INFO - Entered the start_data_ingestion method of TrainPipeline class
+[ 2026-05-25 12:11:13,008 ] root - INFO - Entered the start_data_ingestion method of TrainPipeline class
+[ 2026-05-25 12:11:13,009 ] root - INFO - Getting the data from mongodb
+[ 2026-05-25 12:11:13,009 ] root - INFO - Entered initiate_data_ingestion method of Data_Ingestion class
+[ 2026-05-25 12:11:13,009 ] root - INFO - Reading data from CSV file
+[ 2026-05-25 12:11:13,388 ] root - INFO - Saving data into feature store path: C:\Users\DELL\OneDrive\Desktop\crypto_ml_pr\artifact\05_25_2026_12_11_12\data_ingestion\feature_store\covtype.csv
+[ 2026-05-25 12:11:14,625 ] root - INFO - Shape of dataframe: (72946, 10)

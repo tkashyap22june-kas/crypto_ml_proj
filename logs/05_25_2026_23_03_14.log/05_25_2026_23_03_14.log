@@ -1,0 +1,23 @@
+[ 2026-05-25 23:03:14,287 ] root - INFO - Entered initiate_prediction method of PredictionPipeline class
+[ 2026-05-25 23:03:14,287 ] root - INFO - Entered get_data method of PredictionPipeline class
+[ 2026-05-25 23:03:14,290 ] root - WARNING - Could not read prediction data from S3: Error occurred in python script: [C:\Users\DELL\OneDrive\Desktop\crypto_ml_pr\src\crypto\cloud_storage\aws_storage.py] line number: [103] error message: [[Errno 2] No such file or directory: 'crypto_pred_data.csv']
+[ 2026-05-25 23:03:14,290 ] root - INFO - Creating a sample dataframe for testing purposes
+[ 2026-05-25 23:03:14,291 ] root - INFO - Using numerical columns from schema: ['open', 'high', 'low', 'volume', 'marketCap']
+[ 2026-05-25 23:03:14,304 ] root - INFO - Created sample dataframe with columns: ['open', 'high', 'low', 'volume', 'marketCap']
+[ 2026-05-25 23:03:14,304 ] root - INFO - Created sample dataframe with columns: ['open', 'high', 'low', 'volume', 'marketCap']
+[ 2026-05-25 23:03:14,304 ] root - INFO - Exited the get_data method of PredictionPipeline class
+[ 2026-05-25 23:03:14,304 ] root - INFO - Got dataframe with shape: (1, 5)
+[ 2026-05-25 23:03:14,304 ] root - INFO - Entered predict method of PredictionPipeline class
+[ 2026-05-25 23:03:14,305 ] root - INFO - Input dataframe shape: (1, 5)
+[ 2026-05-25 23:03:14,305 ] root - INFO - Input dataframe columns: ['open', 'high', 'low', 'volume', 'marketCap']
+[ 2026-05-25 23:03:14,305 ] root - INFO - Created SensorEstimator with bucket: tushar-crypto-ml-project-2026, path: model-registry\model.pkl
+[ 2026-05-25 23:03:14,306 ] root - INFO - Is model present in S3: True
+[ 2026-05-25 23:03:14,306 ] root - INFO - Making predictions...
+[ 2026-05-25 23:03:18,502 ] root - ERROR - Error in predict method: Error occurred in python script: [C:\Users\DELL\OneDrive\Desktop\crypto_ml_pr\src\crypto\entity\s3_estimator.py] line number: [62] error message: [SensorModel.predict() got an unexpected keyword argument 'dataframe']
+[ 2026-05-25 23:03:18,503 ] root - WARNING - Failed to make predictions: Error occurred in python script: [C:\Users\DELL\OneDrive\Desktop\crypto_ml_pr\src\crypto\pipeline\prediction_pipeline.py] line number: [91] error message: [Error occurred in python script: [C:\Users\DELL\OneDrive\Desktop\crypto_ml_pr\src\crypto\entity\s3_estimator.py] line number: [62] error message: [SensorModel.predict() got an unexpected keyword argument 'dataframe']]
+[ 2026-05-25 23:03:18,503 ] root - INFO - Creating dummy predictions for demonstration purposes
+[ 2026-05-25 23:03:18,505 ] root - INFO - Created final dataframe with dummy predictions, shape: (1, 6)
+[ 2026-05-25 23:03:18,506 ] root - WARNING - Failed to upload predictions to S3: 'SimpleStorageService' object has no attribute 'upload_df_as_csv'
+[ 2026-05-25 23:03:18,506 ] root - INFO - Continuing without uploading to S3
+[ 2026-05-25 23:03:18,514 ] root - INFO - Saved predictions locally to: C:\Users\DELL\OneDrive\Desktop\crypto_ml_pr\crypto_predictions.csv
+[ 2026-05-25 23:03:18,515 ] root - INFO - Exited initiate_prediction method of PredictionPipeline class

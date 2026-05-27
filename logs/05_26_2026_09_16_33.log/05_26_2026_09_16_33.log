@@ -1,0 +1,14 @@
+[ 2026-05-26 09:16:36,421 ] root - INFO - \U0001f680 Starting Crypto ML Pipeline...
+[ 2026-05-26 09:16:36,423 ] root - INFO - Pipeline started
+[ 2026-05-26 09:16:36,424 ] root - INFO - Starting data ingestion
+[ 2026-05-26 09:16:36,424 ] root - INFO - Entered initiate_data_ingestion method
+[ 2026-05-26 09:16:36,519 ] root - INFO - Dataset loaded successfully: (5, 2)
+[ 2026-05-26 09:16:36,543 ] root - INFO - Data ingestion completed successfully
+[ 2026-05-26 09:16:36,550 ] root - INFO - Entered initiate_data_validation method of Data_Validation class
+[ 2026-05-26 09:16:36,550 ] root - INFO - Starting data validation
+[ 2026-05-26 09:16:36,600 ] root - INFO - Is required column present: [False]
+[ 2026-05-26 09:16:36,600 ] root - INFO - Is required column present: [False]
+[ 2026-05-26 09:16:36,600 ] root - INFO - All required columns present in testing dataframe: False
+[ 2026-05-26 09:16:36,600 ] root - INFO - Missing numerical column: ['open', 'high', 'low', 'volume', 'marketCap']
+[ 2026-05-26 09:16:36,601 ] root - INFO - Missing numerical column: ['open', 'high', 'low', 'volume', 'marketCap']
+[ 2026-05-26 09:16:36,601 ] root - INFO - Validation_error: Columns are missing in training dataframe.Columns are missing in test dataframe.Numerical columns are missing in training dataframe.Numerical columns are missing in test dataframe.

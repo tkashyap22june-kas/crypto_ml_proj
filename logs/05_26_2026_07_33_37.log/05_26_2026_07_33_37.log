@@ -1,0 +1,24 @@
+[ 2026-05-26 07:33:37,846 ] root - INFO - \U0001f680 Starting Crypto ML Pipeline...
+[ 2026-05-26 07:33:37,847 ] root - INFO - Pipeline started
+[ 2026-05-26 07:33:37,847 ] root - INFO - Starting data ingestion
+[ 2026-05-26 07:33:37,847 ] root - INFO - Entered initiate_data_ingestion method of Data_Ingestion class
+[ 2026-05-26 07:33:37,848 ] root - INFO - Reading data from CSV file
+[ 2026-05-26 07:33:38,188 ] root - INFO - Saving data into feature store path: artifact\data_ingestion\feature_store\cleaned_crypto_data.csv
+[ 2026-05-26 07:33:39,636 ] root - INFO - Shape of dataframe: (72946, 10)
+[ 2026-05-26 07:33:39,636 ] root - INFO - Exported data into feature store
+[ 2026-05-26 07:33:39,636 ] root - INFO - Entered split_data_as_train_test method of Data_Ingestion class
+[ 2026-05-26 07:33:39,655 ] root - INFO - Performed train test split on the dataframe
+[ 2026-05-26 07:33:39,655 ] root - INFO - Exited split_data_as_train_test method of Data_Ingestion class
+[ 2026-05-26 07:33:39,656 ] root - INFO - Exporting train and test file path.
+[ 2026-05-26 07:33:40,597 ] root - INFO - Exported train and test file path.
+[ 2026-05-26 07:33:40,599 ] root - INFO - Performed train test split on the dataset
+[ 2026-05-26 07:33:40,599 ] root - INFO - Exited initiate_data_ingestion method of Data_Ingestion class
+[ 2026-05-26 07:33:40,599 ] root - INFO - Data ingestion artifact: DataIngestionArtifact(trained_file_path='artifact\\data_ingestion\\ingested\\train.csv', test_file_path='artifact\\data_ingestion\\ingested\\test.csv')
+[ 2026-05-26 07:33:40,631 ] root - INFO - Entered initiate_data_validation method of Data_Validation class
+[ 2026-05-26 07:33:40,631 ] root - INFO - Starting data validation
+[ 2026-05-26 07:33:40,906 ] root - INFO - Is required column present: [False]
+[ 2026-05-26 07:33:40,907 ] root - INFO - Is required column present: [False]
+[ 2026-05-26 07:33:40,907 ] root - INFO - All required columns present in testing dataframe: False
+[ 2026-05-26 07:33:40,907 ] root - INFO - Missing numerical column: []
+[ 2026-05-26 07:33:40,907 ] root - INFO - Missing numerical column: []
+[ 2026-05-26 07:33:40,908 ] root - INFO - Validation_error: Columns are missing in training dataframe.Columns are missing in test dataframe.

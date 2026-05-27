@@ -1,0 +1,28 @@
+[ 2026-05-25 16:59:51,284 ] root - INFO - \U0001f680 Starting Crypto ML Pipeline...
+[ 2026-05-25 16:59:51,285 ] root - INFO - Pipeline started
+[ 2026-05-25 16:59:51,285 ] root - INFO - Starting data ingestion
+[ 2026-05-25 16:59:51,285 ] root - INFO - Entered initiate_data_ingestion method of Data_Ingestion class
+[ 2026-05-25 16:59:51,285 ] root - INFO - Reading data from CSV file
+[ 2026-05-25 16:59:51,667 ] root - INFO - Saving data into feature store path: C:\Users\DELL\OneDrive\Desktop\crypto_ml_pr\artifact\05_25_2026_16_59_51\data_ingestion\feature_store\covtype.csv
+[ 2026-05-25 16:59:53,298 ] root - INFO - Shape of dataframe: (72946, 10)
+[ 2026-05-25 16:59:53,298 ] root - INFO - Exported data into feature store
+[ 2026-05-25 16:59:53,299 ] root - INFO - Entered split_data_as_train_test method of Data_Ingestion class
+[ 2026-05-25 16:59:53,336 ] root - INFO - Performed train test split on the dataframe
+[ 2026-05-25 16:59:53,336 ] root - INFO - Exited split_data_as_train_test method of Data_Ingestion class
+[ 2026-05-25 16:59:53,337 ] root - INFO - Exporting train and test file path.
+[ 2026-05-25 16:59:54,878 ] root - INFO - Exported train and test file path.
+[ 2026-05-25 16:59:54,882 ] root - INFO - Performed train test split on the dataset
+[ 2026-05-25 16:59:54,882 ] root - INFO - Exited initiate_data_ingestion method of Data_Ingestion class
+[ 2026-05-25 16:59:54,882 ] root - INFO - Data ingestion artifact: DataIngestionArtifact(trained_file_path='C:\\Users\\DELL\\OneDrive\\Desktop\\crypto_ml_pr\\artifact\\05_25_2026_16_59_51\\data_ingestion\\ingested\\train.csv', test_file_path='C:\\Users\\DELL\\OneDrive\\Desktop\\crypto_ml_pr\\artifact\\05_25_2026_16_59_51\\data_ingestion\\ingested\\test.csv')
+[ 2026-05-25 16:59:54,892 ] root - INFO - Entered initiate_data_validation method of Data_Validation class
+[ 2026-05-25 16:59:54,892 ] root - INFO - Starting data validation
+[ 2026-05-25 16:59:55,579 ] root - INFO - Is required column present: [False]
+[ 2026-05-25 16:59:55,580 ] root - INFO - Is required column present: [False]
+[ 2026-05-25 16:59:55,580 ] root - INFO - All required columns present in testing dataframe: False
+[ 2026-05-25 16:59:55,580 ] root - INFO - Missing numerical column: []
+[ 2026-05-25 16:59:55,580 ] root - INFO - Missing numerical column: []
+[ 2026-05-25 16:59:55,581 ] root - INFO - Validation_error: Columns are missing in training dataframe.Columns are missing in test dataframe.
+[ 2026-05-25 16:59:55,581 ] root - INFO - Data validation artifact: DataValidationArtifact(validation_status=False, valid_train_file_path='C:\\Users\\DELL\\OneDrive\\Desktop\\crypto_ml_pr\\artifact\\05_25_2026_16_59_51\\data_ingestion\\ingested\\train.csv', valid_test_file_path='C:\\Users\\DELL\\OneDrive\\Desktop\\crypto_ml_pr\\artifact\\05_25_2026_16_59_51\\data_ingestion\\ingested\\test.csv', invalid_train_file_path='C:\\Users\\DELL\\OneDrive\\Desktop\\crypto_ml_pr\\artifact\\05_25_2026_16_59_51\\data_validation\\invalid\\train.csv', invalid_test_file_path='C:\\Users\\DELL\\OneDrive\\Desktop\\crypto_ml_pr\\artifact\\05_25_2026_16_59_51\\data_validation\\invalid\\test.csv', drift_report_file_path='C:\\Users\\DELL\\OneDrive\\Desktop\\crypto_ml_pr\\artifact\\05_25_2026_16_59_51\\data_validation\\drift_report\\report.yaml')
+[ 2026-05-25 16:59:55,584 ] root - INFO - Starting data transformation
+[ 2026-05-25 16:59:56,003 ] root - INFO - Cleaning dataframe (dropping unwanted columns)
+[ 2026-05-25 16:59:56,006 ] root - INFO - Cleaning dataframe (dropping unwanted columns)

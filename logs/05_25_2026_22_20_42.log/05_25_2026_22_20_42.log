@@ -1,0 +1,51 @@
+[ 2026-05-25 22:20:42,984 ] root - INFO - \U0001f680 Starting Crypto ML Pipeline...
+[ 2026-05-25 22:20:42,985 ] root - INFO - Pipeline started
+[ 2026-05-25 22:20:42,986 ] root - INFO - Starting data ingestion
+[ 2026-05-25 22:20:42,986 ] root - INFO - Entered initiate_data_ingestion method of Data_Ingestion class
+[ 2026-05-25 22:20:42,986 ] root - INFO - Reading data from CSV file
+[ 2026-05-25 22:20:43,366 ] root - INFO - Saving data into feature store path: C:\Users\DELL\OneDrive\Desktop\crypto_ml_pr\artifact\05_25_2026_22_20_42\data_ingestion\feature_store\covtype.csv
+[ 2026-05-25 22:20:45,077 ] root - INFO - Shape of dataframe: (72946, 10)
+[ 2026-05-25 22:20:45,077 ] root - INFO - Exported data into feature store
+[ 2026-05-25 22:20:45,077 ] root - INFO - Entered split_data_as_train_test method of Data_Ingestion class
+[ 2026-05-25 22:20:45,113 ] root - INFO - Performed train test split on the dataframe
+[ 2026-05-25 22:20:45,114 ] root - INFO - Exited split_data_as_train_test method of Data_Ingestion class
+[ 2026-05-25 22:20:45,115 ] root - INFO - Exporting train and test file path.
+[ 2026-05-25 22:20:46,286 ] root - INFO - Exported train and test file path.
+[ 2026-05-25 22:20:46,287 ] root - INFO - Performed train test split on the dataset
+[ 2026-05-25 22:20:46,288 ] root - INFO - Exited initiate_data_ingestion method of Data_Ingestion class
+[ 2026-05-25 22:20:46,288 ] root - INFO - Data ingestion artifact: DataIngestionArtifact(trained_file_path='C:\\Users\\DELL\\OneDrive\\Desktop\\crypto_ml_pr\\artifact\\05_25_2026_22_20_42\\data_ingestion\\ingested\\train.csv', test_file_path='C:\\Users\\DELL\\OneDrive\\Desktop\\crypto_ml_pr\\artifact\\05_25_2026_22_20_42\\data_ingestion\\ingested\\test.csv')
+[ 2026-05-25 22:20:46,292 ] root - INFO - Entered initiate_data_validation method of Data_Validation class
+[ 2026-05-25 22:20:46,292 ] root - INFO - Starting data validation
+[ 2026-05-25 22:20:46,793 ] root - INFO - Is required column present: [False]
+[ 2026-05-25 22:20:46,794 ] root - INFO - Is required column present: [False]
+[ 2026-05-25 22:20:46,794 ] root - INFO - All required columns present in testing dataframe: False
+[ 2026-05-25 22:20:46,794 ] root - INFO - Missing numerical column: []
+[ 2026-05-25 22:20:46,794 ] root - INFO - Missing numerical column: []
+[ 2026-05-25 22:20:46,794 ] root - INFO - Validation_error: Columns are missing in training dataframe.Columns are missing in test dataframe.
+[ 2026-05-25 22:20:46,794 ] root - INFO - Data validation artifact: DataValidationArtifact(validation_status=False, valid_train_file_path='C:\\Users\\DELL\\OneDrive\\Desktop\\crypto_ml_pr\\artifact\\05_25_2026_22_20_42\\data_ingestion\\ingested\\train.csv', valid_test_file_path='C:\\Users\\DELL\\OneDrive\\Desktop\\crypto_ml_pr\\artifact\\05_25_2026_22_20_42\\data_ingestion\\ingested\\test.csv', invalid_train_file_path='C:\\Users\\DELL\\OneDrive\\Desktop\\crypto_ml_pr\\artifact\\05_25_2026_22_20_42\\data_validation\\invalid\\train.csv', invalid_test_file_path='C:\\Users\\DELL\\OneDrive\\Desktop\\crypto_ml_pr\\artifact\\05_25_2026_22_20_42\\data_validation\\invalid\\test.csv', drift_report_file_path='C:\\Users\\DELL\\OneDrive\\Desktop\\crypto_ml_pr\\artifact\\05_25_2026_22_20_42\\data_validation\\drift_report\\report.yaml')
+[ 2026-05-25 22:20:46,796 ] root - INFO - Starting data transformation
+[ 2026-05-25 22:20:47,069 ] root - INFO - Cleaning dataframe (dropping unwanted columns)
+[ 2026-05-25 22:20:47,073 ] root - INFO - Cleaning dataframe (dropping unwanted columns)
+[ 2026-05-25 22:20:47,085 ] root - INFO - Loading schema file
+[ 2026-05-25 22:20:47,089 ] root - INFO - Numerical features: ['open', 'high', 'low', 'volume', 'marketCap']
+[ 2026-05-25 22:20:47,090 ] root - INFO - Categorical features: []
+[ 2026-05-25 22:20:47,187 ] root - INFO - Entered the save_object method of MainUtils class
+[ 2026-05-25 22:20:47,194 ] root - INFO - Exited the save_object method of MainUtils class
+[ 2026-05-25 22:20:47,201 ] root - INFO - Data transformation completed successfully
+[ 2026-05-25 22:20:47,204 ] root - INFO - Loading training and testing data
+[ 2026-05-25 22:20:47,278 ] root - INFO - Entered the load_object method of MainUtils class
+[ 2026-05-25 22:20:47,340 ] root - INFO - Exited the load_object method of MainUtils class
+[ 2026-05-25 22:20:47,340 ] root - INFO - Entered the save_object method of MainUtils class
+[ 2026-05-25 22:20:47,345 ] root - INFO - Exited the save_object method of MainUtils class
+[ 2026-05-25 22:20:47,346 ] root - INFO - Loading test data
+[ 2026-05-25 22:20:47,347 ] root - INFO - Loading trained model
+[ 2026-05-25 22:20:47,347 ] root - INFO - Entered the load_object method of MainUtils class
+[ 2026-05-25 22:20:47,378 ] root - INFO - Exited the load_object method of MainUtils class
+[ 2026-05-25 22:20:47,381 ] root - INFO - R2 Score: 0.9992284418035768
+[ 2026-05-25 22:20:47,381 ] root - INFO - Entered initiate_model_pusher method of ModelTrainer class
+[ 2026-05-25 22:20:47,381 ] root - INFO - Uploading artifacts folder to s3 bucket
+[ 2026-05-25 22:20:47,384 ] root - INFO - Uploaded artifacts folder to s3 bucket
+[ 2026-05-25 22:20:47,384 ] root - INFO - Model pusher artifact: [ModelPusherArtifact(bucket_name='tushar-crypto-ml-project-2026', s3_model_path='model-registry\\model.pkl')]
+[ 2026-05-25 22:20:47,384 ] root - INFO - Exited initiate_model_pusher method of ModelTrainer class
+[ 2026-05-25 22:20:47,384 ] root - INFO - Pipeline completed successfully
+[ 2026-05-25 22:20:47,384 ] root - INFO - \u2705 Pipeline Completed Successfully

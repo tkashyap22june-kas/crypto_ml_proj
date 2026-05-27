@@ -1,0 +1,15 @@
+[ 2026-05-26 09:27:27,758 ] root - INFO - \U0001f680 Starting Crypto ML Pipeline...
+[ 2026-05-26 09:27:27,764 ] root - INFO - Pipeline started
+[ 2026-05-26 09:27:27,765 ] root - INFO - Starting data ingestion
+[ 2026-05-26 09:27:27,765 ] root - INFO - Entered initiate_data_ingestion method
+[ 2026-05-26 09:27:27,799 ] root - INFO - Dataset loaded successfully: (5, 2)
+[ 2026-05-26 09:27:27,839 ] root - INFO - Data ingestion completed successfully
+[ 2026-05-26 09:27:27,845 ] root - INFO - Entered initiate_data_validation method
+[ 2026-05-26 09:27:27,855 ] root - INFO - Required columns present status: False
+[ 2026-05-26 09:27:27,856 ] root - INFO - Required columns present status: False
+[ 2026-05-26 09:27:27,856 ] root - INFO - Missing numerical columns: ['open', 'high', 'low', 'volume', 'marketCap']
+[ 2026-05-26 09:27:27,857 ] root - INFO - Missing numerical columns: ['open', 'high', 'low', 'volume', 'marketCap']
+[ 2026-05-26 09:27:27,857 ] root - INFO - Data validation artifact: DataValidationArtifact(validation_status=False, valid_train_file_path='artifact/train.csv', valid_test_file_path='artifact/test.csv', invalid_train_file_path='artifact/data_validation/invalid_train.csv', invalid_test_file_path='artifact/data_validation/invalid_test.csv', drift_report_file_path='artifact/data_validation/drift_report.yaml')
+[ 2026-05-26 09:27:27,857 ] root - INFO - Starting data transformation
+[ 2026-05-26 09:27:27,862 ] root - INFO - Cleaning dataframe (dropping unwanted columns)
+[ 2026-05-26 09:27:27,867 ] root - INFO - Cleaning dataframe (dropping unwanted columns)

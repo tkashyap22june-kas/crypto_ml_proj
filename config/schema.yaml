@@ -1,0 +1,22 @@
+columns:
+  open: float
+  high: float
+  low: float
+  close: float
+  volume: float
+  marketCap: float
+  crypto_name: object
+
+numerical_columns:
+  - open
+  - high
+  - low
+  - volume
+  - marketCap
+
+
+
+drop_columns:
+  - Unnamed: 0
+  - timestamp
+  - date

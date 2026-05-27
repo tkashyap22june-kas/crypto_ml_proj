@@ -1,0 +1,24 @@
+[ 2026-05-26 09:42:57,101 ] root - INFO - \U0001f680 Starting Crypto ML Pipeline...
+[ 2026-05-26 09:42:57,102 ] root - INFO - Pipeline started
+[ 2026-05-26 09:42:57,103 ] root - INFO - Starting data ingestion
+[ 2026-05-26 09:42:57,103 ] root - INFO - Entered initiate_data_ingestion method
+[ 2026-05-26 09:42:57,115 ] root - INFO - Dataset loaded successfully: (5, 6)
+[ 2026-05-26 09:42:57,136 ] root - INFO - Data ingestion completed successfully
+[ 2026-05-26 09:42:57,141 ] root - INFO - Entered initiate_data_validation method
+[ 2026-05-26 09:42:57,149 ] root - INFO - Required columns present status: False
+[ 2026-05-26 09:42:57,150 ] root - INFO - Required columns present status: False
+[ 2026-05-26 09:42:57,150 ] root - INFO - Missing numerical columns: []
+[ 2026-05-26 09:42:57,150 ] root - INFO - Missing numerical columns: []
+[ 2026-05-26 09:42:57,150 ] root - INFO - Data validation artifact: DataValidationArtifact(validation_status=False, valid_train_file_path='artifact/train.csv', valid_test_file_path='artifact/test.csv', invalid_train_file_path='artifact/data_validation/invalid_train.csv', invalid_test_file_path='artifact/data_validation/invalid_test.csv', drift_report_file_path='artifact/data_validation/drift_report.yaml')
+[ 2026-05-26 09:42:57,150 ] root - INFO - Starting data transformation
+[ 2026-05-26 09:42:57,153 ] root - INFO - Cleaning dataframe (dropping unwanted columns)
+[ 2026-05-26 09:42:57,157 ] root - INFO - Cleaning dataframe (dropping unwanted columns)
+[ 2026-05-26 09:42:57,162 ] root - INFO - Loading schema file
+[ 2026-05-26 09:42:57,166 ] root - INFO - Numerical features: ['open', 'high', 'low', 'volume', 'marketCap']
+[ 2026-05-26 09:42:57,166 ] root - INFO - Categorical features: []
+[ 2026-05-26 09:42:57,291 ] root - INFO - Entered the save_object method of MainUtils class
+[ 2026-05-26 09:42:57,298 ] root - INFO - Exited the save_object method of MainUtils class
+[ 2026-05-26 09:42:57,302 ] root - INFO - Data transformation completed successfully
+[ 2026-05-26 09:42:57,303 ] root - INFO - Loading training and testing data
+[ 2026-05-26 09:42:57,377 ] root - INFO - Entered the load_object method of MainUtils class
+[ 2026-05-26 09:42:57,427 ] root - INFO - Exited the load_object method of MainUtils class

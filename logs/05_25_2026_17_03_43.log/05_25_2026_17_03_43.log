@@ -1,0 +1,46 @@
+[ 2026-05-25 17:03:46,600 ] root - INFO - \U0001f680 Starting Crypto ML Pipeline...
+[ 2026-05-25 17:03:46,603 ] root - INFO - Pipeline started
+[ 2026-05-25 17:03:46,603 ] root - INFO - Starting data ingestion
+[ 2026-05-25 17:03:46,603 ] root - INFO - Entered initiate_data_ingestion method of Data_Ingestion class
+[ 2026-05-25 17:03:46,603 ] root - INFO - Reading data from CSV file
+[ 2026-05-25 17:03:48,363 ] root - INFO - Saving data into feature store path: C:\Users\DELL\OneDrive\Desktop\crypto_ml_pr\artifact\05_25_2026_17_03_46\data_ingestion\feature_store\covtype.csv
+[ 2026-05-25 17:03:54,766 ] root - INFO - Shape of dataframe: (72946, 10)
+[ 2026-05-25 17:03:54,768 ] root - INFO - Exported data into feature store
+[ 2026-05-25 17:03:54,768 ] root - INFO - Entered split_data_as_train_test method of Data_Ingestion class
+[ 2026-05-25 17:03:54,869 ] root - INFO - Performed train test split on the dataframe
+[ 2026-05-25 17:03:54,869 ] root - INFO - Exited split_data_as_train_test method of Data_Ingestion class
+[ 2026-05-25 17:03:54,871 ] root - INFO - Exporting train and test file path.
+[ 2026-05-25 17:03:56,564 ] root - INFO - Exported train and test file path.
+[ 2026-05-25 17:03:56,570 ] root - INFO - Performed train test split on the dataset
+[ 2026-05-25 17:03:56,571 ] root - INFO - Exited initiate_data_ingestion method of Data_Ingestion class
+[ 2026-05-25 17:03:56,572 ] root - INFO - Data ingestion artifact: DataIngestionArtifact(trained_file_path='C:\\Users\\DELL\\OneDrive\\Desktop\\crypto_ml_pr\\artifact\\05_25_2026_17_03_46\\data_ingestion\\ingested\\train.csv', test_file_path='C:\\Users\\DELL\\OneDrive\\Desktop\\crypto_ml_pr\\artifact\\05_25_2026_17_03_46\\data_ingestion\\ingested\\test.csv')
+[ 2026-05-25 17:03:56,948 ] root - INFO - Entered initiate_data_validation method of Data_Validation class
+[ 2026-05-25 17:03:56,948 ] root - INFO - Starting data validation
+[ 2026-05-25 17:03:57,573 ] root - INFO - Is required column present: [False]
+[ 2026-05-25 17:03:57,573 ] root - INFO - Is required column present: [False]
+[ 2026-05-25 17:03:57,574 ] root - INFO - All required columns present in testing dataframe: False
+[ 2026-05-25 17:03:57,574 ] root - INFO - Missing numerical column: []
+[ 2026-05-25 17:03:57,574 ] root - INFO - Missing numerical column: []
+[ 2026-05-25 17:03:57,575 ] root - INFO - Validation_error: Columns are missing in training dataframe.Columns are missing in test dataframe.
+[ 2026-05-25 17:03:57,575 ] root - INFO - Data validation artifact: DataValidationArtifact(validation_status=False, valid_train_file_path='C:\\Users\\DELL\\OneDrive\\Desktop\\crypto_ml_pr\\artifact\\05_25_2026_17_03_46\\data_ingestion\\ingested\\train.csv', valid_test_file_path='C:\\Users\\DELL\\OneDrive\\Desktop\\crypto_ml_pr\\artifact\\05_25_2026_17_03_46\\data_ingestion\\ingested\\test.csv', invalid_train_file_path='C:\\Users\\DELL\\OneDrive\\Desktop\\crypto_ml_pr\\artifact\\05_25_2026_17_03_46\\data_validation\\invalid\\train.csv', invalid_test_file_path='C:\\Users\\DELL\\OneDrive\\Desktop\\crypto_ml_pr\\artifact\\05_25_2026_17_03_46\\data_validation\\invalid\\test.csv', drift_report_file_path='C:\\Users\\DELL\\OneDrive\\Desktop\\crypto_ml_pr\\artifact\\05_25_2026_17_03_46\\data_validation\\drift_report\\report.yaml')
+[ 2026-05-25 17:03:57,580 ] root - INFO - Starting data transformation
+[ 2026-05-25 17:03:57,891 ] root - INFO - Cleaning dataframe (dropping unwanted columns)
+[ 2026-05-25 17:03:57,898 ] root - INFO - Cleaning dataframe (dropping unwanted columns)
+[ 2026-05-25 17:03:57,909 ] root - INFO - Loading schema file
+[ 2026-05-25 17:03:57,914 ] root - INFO - Numerical features: ['open', 'high', 'low', 'volume', 'marketCap']
+[ 2026-05-25 17:03:57,915 ] root - INFO - Categorical features: []
+[ 2026-05-25 17:03:58,088 ] root - INFO - Entered the save_object method of MainUtils class
+[ 2026-05-25 17:03:58,106 ] root - INFO - Exited the save_object method of MainUtils class
+[ 2026-05-25 17:03:58,117 ] root - INFO - Data transformation completed successfully
+[ 2026-05-25 17:03:58,119 ] root - INFO - Starting model training
+[ 2026-05-25 17:03:58,193 ] root - INFO - x_train shape: (58356, 5)
+[ 2026-05-25 17:03:58,194 ] root - INFO - x_test shape: (14590, 5)
+[ 2026-05-25 17:03:58,242 ] root - INFO - R2 Score: 0.9939414574498106
+[ 2026-05-25 17:03:58,243 ] root - INFO - MAE: 16.629150593664615
+[ 2026-05-25 17:03:58,243 ] root - INFO - RMSE: 407.2485749008608
+[ 2026-05-25 17:03:58,243 ] root - INFO - Entered the load_object method of MainUtils class
+[ 2026-05-25 17:03:58,323 ] root - INFO - Exited the load_object method of MainUtils class
+[ 2026-05-25 17:03:58,324 ] root - INFO - Entered the save_object method of MainUtils class
+[ 2026-05-25 17:03:58,332 ] root - INFO - Exited the save_object method of MainUtils class
+[ 2026-05-25 17:03:58,332 ] root - INFO - Model saved successfully
+[ 2026-05-25 17:03:58,333 ] root - INFO - Loading transformed test data

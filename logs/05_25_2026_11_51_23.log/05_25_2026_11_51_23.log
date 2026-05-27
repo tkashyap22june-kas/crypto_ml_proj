@@ -1,0 +1,40 @@
+[ 2026-05-25 11:51:24,887 ] root - INFO - Entered the run_pipeline method of TrainPipeline class
+[ 2026-05-25 11:51:24,889 ] root - INFO - Entered the start_data_ingestion method of TrainPipeline class
+[ 2026-05-25 11:51:24,889 ] root - INFO - Entered the start_data_ingestion method of TrainPipeline class
+[ 2026-05-25 11:51:24,889 ] root - INFO - Getting the data from mongodb
+[ 2026-05-25 11:51:24,890 ] root - INFO - Entered initiate_data_ingestion method of Data_Ingestion class
+[ 2026-05-25 11:51:24,890 ] root - INFO - Reading data from CSV file
+[ 2026-05-25 11:51:25,244 ] root - INFO - Saving data into feature store path: C:\Users\DELL\OneDrive\Desktop\crypto_ml_pr\artifact\05_25_2026_11_51_24\data_ingestion\feature_store\covtype.csv
+[ 2026-05-25 11:51:26,014 ] root - INFO - Shape of dataframe: (72946, 10)
+[ 2026-05-25 11:51:26,019 ] root - INFO - Got the data from mongodb
+[ 2026-05-25 11:51:26,019 ] root - INFO - Entered split_data_as_train_test method of Data_Ingestion class
+[ 2026-05-25 11:51:26,038 ] root - INFO - Performed train test split on the dataframe
+[ 2026-05-25 11:51:26,038 ] root - INFO - Exited split_data_as_train_test method of Data_Ingestion class
+[ 2026-05-25 11:51:26,039 ] root - INFO - Exporting train and test file path.
+[ 2026-05-25 11:51:26,891 ] root - INFO - Exported train and test file path.
+[ 2026-05-25 11:51:26,893 ] root - INFO - Performed train test split on the dataset
+[ 2026-05-25 11:51:26,893 ] root - INFO - Exited initiate_data_ingestion method of Data_Ingestion class
+[ 2026-05-25 11:51:26,893 ] root - INFO - Data ingestion artifact: DataIngestionArtifact(trained_file_path='C:\\Users\\DELL\\OneDrive\\Desktop\\crypto_ml_pr\\artifact\\05_25_2026_11_51_24\\data_ingestion\\ingested\\train.csv', test_file_path='C:\\Users\\DELL\\OneDrive\\Desktop\\crypto_ml_pr\\artifact\\05_25_2026_11_51_24\\data_ingestion\\ingested\\test.csv')
+[ 2026-05-25 11:51:26,895 ] root - INFO - Got the train_set and test_set from mongodb
+[ 2026-05-25 11:51:26,895 ] root - INFO - Exited the start_data_ingestion method of TrainPipeline class
+[ 2026-05-25 11:51:26,895 ] root - INFO - Entered the start_data_validation method of TrainPipeline class
+[ 2026-05-25 11:51:26,899 ] root - INFO - Entered initiate_data_validation method of Data_Validation class
+[ 2026-05-25 11:51:26,900 ] root - INFO - Starting data validation
+[ 2026-05-25 11:51:27,323 ] root - INFO - Is required column present: [False]
+[ 2026-05-25 11:51:27,323 ] root - INFO - Is required column present: [False]
+[ 2026-05-25 11:51:27,323 ] root - INFO - All required columns present in testing dataframe: False
+[ 2026-05-25 11:51:27,324 ] root - INFO - Missing numerical column: []
+[ 2026-05-25 11:51:27,324 ] root - INFO - Missing numerical column: []
+[ 2026-05-25 11:51:27,324 ] root - INFO - Validation_error: Columns are missing in training dataframe.Columns are missing in test dataframe.
+[ 2026-05-25 11:51:27,324 ] root - INFO - Data validation artifact: DataValidationArtifact(validation_status=False, valid_train_file_path='C:\\Users\\DELL\\OneDrive\\Desktop\\crypto_ml_pr\\artifact\\05_25_2026_11_51_24\\data_ingestion\\ingested\\train.csv', valid_test_file_path='C:\\Users\\DELL\\OneDrive\\Desktop\\crypto_ml_pr\\artifact\\05_25_2026_11_51_24\\data_ingestion\\ingested\\test.csv', invalid_train_file_path='C:\\Users\\DELL\\OneDrive\\Desktop\\crypto_ml_pr\\artifact\\05_25_2026_11_51_24\\data_validation\\invalid\\train.csv', invalid_test_file_path='C:\\Users\\DELL\\OneDrive\\Desktop\\crypto_ml_pr\\artifact\\05_25_2026_11_51_24\\data_validation\\invalid\\test.csv', drift_report_file_path='C:\\Users\\DELL\\OneDrive\\Desktop\\crypto_ml_pr\\artifact\\05_25_2026_11_51_24\\data_validation\\drift_report\\report.yaml')
+[ 2026-05-25 11:51:27,325 ] root - INFO - Performed the data validation operation
+[ 2026-05-25 11:51:27,326 ] root - INFO - Exited the start_data_validation method of TrainPipeline class
+[ 2026-05-25 11:51:27,326 ] root - INFO - Entered initiate_data_transformation method of Data_Transformation class
+[ 2026-05-25 11:51:27,326 ] root - INFO - Starting data transformation
+[ 2026-05-25 11:51:27,326 ] root - INFO - Entered get_data_transformer_object method of DataTransformation class
+[ 2026-05-25 11:51:27,326 ] root - INFO - Got numerical, categorical, transformation columns from schema config
+[ 2026-05-25 11:51:27,328 ] root - INFO - Created preprocessor object from ColumnTransformer
+[ 2026-05-25 11:51:27,329 ] root - INFO - Exited get_data_transformer_object method of DataTransformation class
+[ 2026-05-25 11:51:27,329 ] root - INFO - Created preprocessor object from ColumnTransformer
+[ 2026-05-25 11:51:27,329 ] root - INFO - Exited get_data_transformer_object method of DataTransformation class
+[ 2026-05-25 11:51:27,329 ] root - INFO - Got the preprocessor object

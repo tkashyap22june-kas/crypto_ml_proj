@@ -1,0 +1,6 @@
+[ 2026-05-25 10:33:15,891 ] root - INFO - Entered the run_pipeline method of TrainPipeline class
+[ 2026-05-25 10:33:15,893 ] root - INFO - Entered the start_data_ingestion method of TrainPipeline class
+[ 2026-05-25 10:33:15,893 ] root - INFO - Entered the start_data_ingestion method of TrainPipeline class
+[ 2026-05-25 10:33:15,893 ] root - INFO - Getting the data from mongodb
+[ 2026-05-25 10:33:15,893 ] root - INFO - Entered initiate_data_ingestion method of Data_Ingestion class
+[ 2026-05-25 10:33:15,894 ] root - INFO - Exporting data from mongodb

@@ -1,5 +1,6 @@
 import os
 import sys
+from .exception import cryptoException
 
 def error_message_detail(error, error_detail):
     try:

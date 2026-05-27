@@ -8,7 +8,8 @@ import pymongo
 import certifi
 from dotenv import load_dotenv
 
-load_dotenv()
+from dotenv import load_dotenv
+load_dotenv(dotenv_path=".env")
 
 ca = certifi.where()
 
