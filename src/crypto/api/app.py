@@ -2,6 +2,7 @@
 from pydantic import BaseModel
 import pandas as pd
 import os
+
 from crypto.utils.main_utils import load_object
 
 app = FastAPI()
@@ -16,10 +17,10 @@ def load_model():
     global model
     try:
         model = load_object(MODEL_PATH)
-        print("✅ Model loaded successfully")
+        print("Model loaded successfully")
     except Exception as e:
-        print("❌ Model loading failed:", e)
-        raise RuntimeError("Model could not be loaded")  # IMPORTANT
+        print("Model loading failed:", e)
+        model = None
 
 
 class PredictionInput(BaseModel):
