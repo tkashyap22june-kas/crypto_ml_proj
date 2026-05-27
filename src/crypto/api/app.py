@@ -3,7 +3,7 @@ from pydantic import BaseModel
 import pandas as pd
 import os
 
-from crypto.utils.main_utils import load_object
+from src.crypto.utils.main_utils import load_object
 
 app = FastAPI()
 
