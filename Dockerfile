@@ -1,18 +1,18 @@
 FROM python:3.10-slim
 
-ENV PYTHONDONTWRITEBYTECODE=1
-ENV PYTHONUNBUFFERED=1
-
 WORKDIR /app
 
-RUN apt-get update && apt-get install -y gcc \
-    && rm -rf /var/lib/apt/lists/*
+RUN apt-get update && apt-get install -y gcc
 
 COPY requirements.txt .
+
 RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
 
-EXPOSE 8000
+# 🔥 THIS IS THE KEY FIX
+ENV PYTHONPATH=/app/src
 
-CMD ["uvicorn", "src.crypto.api.app:app", "--host", "0.0.0.0", "--port", "8000"]
+EXPOSE 10000
+
+CMD ["sh", "-c", "uvicorn crypto.api.app:app --host 0.0.0.0 --port $PORT"]
