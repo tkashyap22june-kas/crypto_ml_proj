@@ -9,9 +9,9 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
 
-# 🔥 KEY FIX
-ENV PYTHONPATH=/app/src
+# 🔥 CRITICAL FIX (must be /app, NOT /app/src)
+ENV PYTHONPATH=/app
 
 EXPOSE 10000
 
-CMD ["sh", "-c", "uvicorn crypto.api.app:app --host 0.0.0.0 --port $PORT"]
+CMD ["sh", "-c", "uvicorn src.crypto.api.app:app --host 0.0.0.0 --port $PORT"]
