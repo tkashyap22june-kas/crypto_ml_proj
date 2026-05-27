@@ -2,8 +2,12 @@
 from pydantic import BaseModel
 import pandas as pd
 import os
+import sys
 
-from src.crypto.utils.main_utils import load_object
+# 🔥 FORCE PYTHON PATH (THIS IS THE REAL FIX)
+sys.path.append(os.path.join(os.path.dirname(__file__), "../../.."))
+
+from crypto.utils.main_utils import load_object
 
 app = FastAPI()
 
