@@ -2,22 +2,14 @@
 from pydantic import BaseModel
 import pandas as pd
 import os
-import importlib.util
+
+from src.utils.main_utils import load_object
 
 app = FastAPI()
 
 MODEL_PATH = os.path.join("artifact", "model_trainer", "model.pkl")
 
-
-# 🔥 DIRECT FILE LOAD (NO PACKAGE IMPORTS)
-UTIL_PATH = os.path.join("src", "crypto", "utils", "main_utils.py")
-
-spec = importlib.util.spec_from_file_location("main_utils", UTIL_PATH)
-main_utils = importlib.util.module_from_spec(spec)
-spec.loader.exec_module(main_utils)
-
-load_object = main_utils.load_object
-
+# Load model
 model = load_object(MODEL_PATH)
 
 
@@ -37,8 +29,10 @@ def home():
 @app.post("/predict")
 def predict(data: PredictionInput):
 
-    df = pd.DataFrame([[data.open, data.high, data.low, data.volume, data.marketCap]],
-                      columns=["open", "high", "low", "volume", "marketCap"])
+    df = pd.DataFrame(
+        [[data.open, data.high, data.low, data.volume, data.marketCap]],
+        columns=["open", "high", "low", "volume", "marketCap"]
+    )
 
     pred = model.predict(df)
 
