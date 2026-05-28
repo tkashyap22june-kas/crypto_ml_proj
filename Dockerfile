@@ -9,7 +9,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
 
-# 🔥 KEY FIX: make src visible as root package
+# IMPORTANT: set src as python root
 ENV PYTHONPATH=/app/src
 
 EXPOSE 10000

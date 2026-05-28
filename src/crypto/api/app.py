@@ -2,11 +2,8 @@
 from pydantic import BaseModel
 import pandas as pd
 import os
-import sys
 
-sys.path.append("/app/src")
-
-from crypto.utils.main_utils import load_object
+from crypto.utils.main_utils import load_object  # ONLY THIS WORKS
 
 app = FastAPI()
 
