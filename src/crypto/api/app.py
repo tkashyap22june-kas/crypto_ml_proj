@@ -2,25 +2,23 @@
 from pydantic import BaseModel
 import pandas as pd
 import os
-
-from crypto.utils.main_utils import load_object  # ONLY THIS WORKS
+import importlib.util
 
 app = FastAPI()
 
 MODEL_PATH = os.path.join("artifact", "model_trainer", "model.pkl")
 
-model = None
 
+# 🔥 DIRECT FILE LOAD (NO PACKAGE IMPORTS)
+UTIL_PATH = os.path.join("src", "crypto", "utils", "main_utils.py")
 
-@app.on_event("startup")
-def load_model():
-    global model
-    try:
-        model = load_object(MODEL_PATH)
-        print("Model loaded successfully")
-    except Exception as e:
-        print("Model loading failed:", e)
-        model = None
+spec = importlib.util.spec_from_file_location("main_utils", UTIL_PATH)
+main_utils = importlib.util.module_from_spec(spec)
+spec.loader.exec_module(main_utils)
+
+load_object = main_utils.load_object
+
+model = load_object(MODEL_PATH)
 
 
 class PredictionInput(BaseModel):
@@ -38,8 +36,6 @@ def home():
 
 @app.post("/predict")
 def predict(data: PredictionInput):
-    if model is None:
-        return {"error": "Model not loaded"}
 
     df = pd.DataFrame([[data.open, data.high, data.low, data.volume, data.marketCap]],
                       columns=["open", "high", "low", "volume", "marketCap"])
