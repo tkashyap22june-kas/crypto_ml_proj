@@ -11,11 +11,16 @@ venv/
 .gitignore
 
 .ipynb_checkpoints/
-pytest_cache/
+.pytest_cache/
+__pycache__/
+*.pyc
 
 *.log
 .DS_Store
 Thumbs.db
+
+myvenv/
+venv/
 
 build/
 dist/
