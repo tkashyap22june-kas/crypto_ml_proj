@@ -9,7 +9,9 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
 
+# 🔥 KEY FIX: make src visible as root package
+ENV PYTHONPATH=/app/src
+
 EXPOSE 10000
 
-# 🔥 FIX: hardcode port (Render-safe)
-CMD ["uvicorn", "src.crypto.api.app:app", "--host", "0.0.0.0", "--port", "10000"]
+CMD ["uvicorn", "crypto.api.app:app", "--host", "0.0.0.0", "--port", "10000"]
