@@ -4,8 +4,8 @@ import pandas as pd
 import os
 import sys
 
-# 🔥 FORCE PYTHON PATH (THIS IS THE REAL FIX)
-sys.path.append(os.path.join(os.path.dirname(__file__), "../../.."))
+# 🔥 FORCE PATH (this fixes crypto import forever)
+sys.path.append("/app/src")
 
 from crypto.utils.main_utils import load_object
 
