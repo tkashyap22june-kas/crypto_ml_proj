@@ -2,14 +2,15 @@
 from pydantic import BaseModel
 import pandas as pd
 import os
-
-from utils.main_utils import load_object
+import pickle
 
 app = FastAPI()
 
 MODEL_PATH = os.path.join("artifact", "model_trainer", "model.pkl")
 
-model = load_object(MODEL_PATH)
+# Load model directly
+with open(MODEL_PATH, "rb") as f:
+    model = pickle.load(f)
 
 
 class PredictionInput(BaseModel):
