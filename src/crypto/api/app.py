@@ -3,13 +3,12 @@ from pydantic import BaseModel
 import pandas as pd
 import os
 
-from src.utils.main_utils import load_object
+from utils.main_utils import load_object
 
 app = FastAPI()
 
 MODEL_PATH = os.path.join("artifact", "model_trainer", "model.pkl")
 
-# Load model
 model = load_object(MODEL_PATH)
 
 
